@@ -11,5 +11,7 @@ namespace EasyNotificationsApp.Controllers
             return View();
         }
 
+
+
     }
 }
