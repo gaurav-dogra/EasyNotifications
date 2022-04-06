@@ -6,9 +6,9 @@ namespace EasyNotificationsApp.Controllers
 {
     public class UserController : Controller
     {
-        public string Index()
+        public IActionResult Index()
         {
-            return "In the user controller";
+            return View();
         }
 
     }
