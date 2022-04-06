@@ -1,13 +1,9 @@
 ﻿@model EasyNotificationsApp.Models.User
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Signup for Easy Notifications";
 }
 
-<h1>Create</h1>
-
-<h4>User</h4>
-<hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
@@ -18,12 +14,19 @@
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
+                <label asp-for="Password" class="control-label">Password (6 or more characters)</label>
                 <input asp-for="Password" class="form-control" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
+            <div>
+                <p>By clicking Agree & Join, you agree to the 
+                    <a href="#">User Agreement</a>, 
+                    <a href="#">Privacy Policy</a>,
+                    and <a href="#">Cookie Policy</a>.</p>
+            </div>
+
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Agree & Join" class="btn btn-primary" />
             </div>
         </form>
     </div>

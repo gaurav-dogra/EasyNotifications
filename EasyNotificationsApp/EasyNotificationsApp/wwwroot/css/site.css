@@ -16,3 +16,6 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+//prevent a line break in hyperlinks
+a { white-space: nowrap; }
