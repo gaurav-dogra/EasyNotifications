@@ -1,4 +1,10 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using EasyNotificationsApp.Data;
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<EasyNotificationsAppContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("EasyNotificationsAppContext")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
